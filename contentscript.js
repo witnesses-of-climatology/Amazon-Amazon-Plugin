@@ -1,0 +1,1 @@
+window.open("https://www.pexels.com/search/rainforest/");

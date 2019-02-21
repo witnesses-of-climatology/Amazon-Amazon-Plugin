@@ -1,0 +1,15 @@
+{
+  "name": "Amazon Amazon Plugin",
+  "version": "1.0",
+  "description": "Show photos of the Amazon when browsing to Amazon.com",
+  "permissions" : [
+    "activeTab"
+  ],
+   "content_scripts": [
+   {
+     "matches": ["https://www.amazon.com/*"],
+     "js": ["contentscript.js"]
+   }
+ ],
+  "manifest_version": 2
+}
