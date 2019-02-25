@@ -1,14 +1,19 @@
 {
-  "name": "Amazon Amazon Plugin",
+  "name": "Reclaiming the Amazon",
   "version": "1.0",
   "description": "Show photos of the Amazon when browsing to Amazon.com",
   "permissions" : [
-    "activeTab"
+    "activeTab", "storage"
   ],
+  "icons": { "16": "tree_16.png",
+             "48": "tree_48.png",
+             "128": "tree_128.png" },
    "content_scripts": [
    {
      "matches": ["https://www.amazon.com/*"],
-     "js": ["contentscript.js"]
+     "run_at": "document_start",
+     "js": ["contentscript.js"],
+     "css": ["amazon.css"]
    }
  ],
   "manifest_version": 2
