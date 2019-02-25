@@ -27,10 +27,44 @@ const facts = [
 "There are more trees in the Amazon than stars in the Milky Way galaxy",
 "There are nearly 1 million insects known to science in the Amazon basin",
 "A single tree in Peru was found to have more species of ants than found in the entire United Kingdom",
+"The Amazon is the world's biggest rainforest, larger than the next two largest rainforests — in the Congo Basin and Indonesia — combined",
+"The Amazon River is by far the world's largest river by volume. It has over 1,100 tributaries, 17 of which are longer than 1000 miles.",
+"The Amazon River once flowed west-ward instead of east-ward as it does today. The rise of the Andes caused it to flow into the Atlantic Ocean.",
+"The Amazon is estimated to have 16,000 tree species and 390 billion individual trees",
+"The Amazon is thought to have 2.5 million species of insects",
+"Cattle ranching accounts for roughly 70 percent of deforestation in the Amazon",
+"There are approximately 3000 fruits that grow in the rainforest that are edible; of these only 200 are now in use in the Western World. The Indians of the rainforest use over 2000.",
+"The toucan is the loudest creature in the Amazon. You can hear it as far as a half mile away",
+"If you were caught in the rain in the Amazon you have about 10 minutes to find your umbrella. The trees are so tightly packed that it can take 10 minutes for the rain to reach the ground below.",
+"Amazon natives use rainforest plants regularly but 90% of the ones they use have not been studied by modern science.",
+"There are approximately 10 million species of animals, plants and insects known to humanity and more than half of them call the rainforest home.",
+"Rainforests once covered 14% of the earth's land surface; now they cover a mere 6% and experts estimate that the last remaining rainforests could be consumed in less than 40 years.",
+"The Amazon rainforest is also referred to as the ‘Lungs of the Planet' because it produces more than 20% of the world's oxygen.",
+"One hectare (2.47 acres) may contain over 750 types of trees and 1500 species of higher plants.",
+"Much of our diet originated in the tropical rainforest, a small sampling includes: avocados, bananas, guavas, pineapples, mangos, cayenne, chocolate, ginger, coffee, Brazil nuts and cashews.",
+"Vincristine, extracted from the rainforest plant, periwinkle, cures 90% of acute childhood leukemia.",
+"The U.S. National Cancer Institute has identified 3000 plants that are active against cancer cells 70% of which are found in the rainforest.",
+"25% of the active ingredients in today's cancer-fighting drugs come from organisms found only in the rainforest.",
+"The Amazon is arguably the longest river in the world at 6,992 km, and contains more water than the Mississippi, Nile, and Yangtze combined",
+"The name 'Amazon' was given by Spanish explorer Francisco Orellana, after he was attacked by female warriors named theIcamiabas. He compared them to the Amazons of Greek mythology.",
+"The Amazon delivers 55 million gallons of water into the Atlantic ocean every second.",
+"The rainforest floor is very dark, with less than 1% of the light making it through the canopy of the trees.",
+"The Amazon River’s width varies between 1 and 6.2 miles during the dry season, but but up to 30 miles wide during the rainy season. It is 150 miles wide when it reaches the Atlantic Ocean.",
+"These dolphins have traditionally been spared from tribal hunting because they were believed to be magical creatures. They are now threatened by pollution.",
+"There are approximately 150 different species of monkeys found in the Amazon.",
+"Brazil is also home to more uncontacted indigenous tribes than any other country in the world, with an estimated 80 of them living in remote corners of the Brazilian Amazon.",
+"Winds carry mineral-rich dust from the Sahara to the Amazon, depositing over 27 million tons a year. Heavy rains deplete Amazonian phosphorous, while the Sahara replenishes them.",
+"The Rio Hamza is a subterranean river underneath the Amazon that is just as long and many times as wide. It runs about 4 kms underground and moves at one millimeter an hour.",
+"There are no bridges over the Amazon River because of the dramatic width change in the rainy season.",
+"The Amazon is at least 55 million years old. Take that, Pyramids!",
+"Norway has donated a billion USD to protect the Amazon rainforest. Thanks Norway! Hey Saudia Arabia...",
+"Human settlement in the Amazon dates back to ~11,200 years ago. Studies suggest that the natives of the AMazon were farming the forests to make them more productive.",
+"The Amazon's poison dart frog has enough venom that can kill up to 10 humans.",
+"Martin Strel holds the Guinness World Record for swimming the entire length of 5,268 m of the Amazon River for 66 days.",
+"In the past years, the Amazon has lost approximately 20% of its due to human deforestation."
+];
 
-]
-
-// Many of these facts came from Amazon Aid Foundation - attribution by linking to many of their awesome pages in the learn section
+// Many facts are from: http://www.rain-tree.com/facts.htm, Motagabay.com, Amazon Aid Foundation, softschools.com, www.rainforestcruises.com
 
 const learn = [
 "https://www.globalforestwatch.org/dashboards/country/BRA",
@@ -59,8 +93,19 @@ const learn = [
 "https://amazonaid.org/resources/",
 "https://amazonaid.org/birds/",
 "https://amazonaid.org/species/giant-waxy-tree-frog/",
-"https://amazonaid.org/warrior/why-you-should-care/"
-
+"https://amazonaid.org/warrior/why-you-should-care/",
+"https://www.washingtonpost.com/news/energy-environment/wp/2016/12/02/amazon-deforestation-is-increasing-at-a-time-when-the-planet-can-least-afford-it/",
+"https://www.washingtonpost.com/news/speaking-of-science/wp/2018/03/27/archaeologists-discover-81-ancient-settlements-in-the-amazon/?utm_term=.30f9d3cffe4a",
+"https://nationalzoo.si.edu/animals/exhibits/amazonia",
+"https://rainforests.mongabay.com/amazon/deforestation_calculations.html",
+"https://www.hbw.com/ibc/photo/hoatzin-opisthocomus-hoazin/hoatzin-opisthocomus-hoazin-also-known-stinkbird-or-canje",
+"https://news.nationalgeographic.com/2017/08/amazon-brazil-new-species-discovered-spd/",
+"http://www.rain-tree.com/facts.htm",
+"http://www.rain-tree.com/plants.htm",
+"https://www.wired.com/2015/02/sahara-keeps-amazon-green/",
+"https://www.ietravel.com/blog/30-fascinating-facts-about-brazilian-amazon",
+"https://www.theguardian.com/environment/2011/aug/26/underground-river-amazon",
+"https://www.ietravel.com/blog/10-cool-creepy-crawlies-found-amazon-rainforest"
 ];
 
 
@@ -126,7 +171,12 @@ const photos = [
   {url:"https://images.unsplash.com/photo-1502780402662-acc01c084a25?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3180&q=80", attribution: "David Clode @ Unsplash"},
   {url:"https://images.unsplash.com/photo-1513137389744-267d0b623771?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3000&q=80", attribution: "Atik Sulianami @ Unsplash"},
   {url:"https://images.unsplash.com/photo-1518715179561-57faf0b9fd37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3152&q=80", attribution: "Aditya Hermawan @ Unsplash"},
-  {url:"https://images.unsplash.com/photo-1542296803-f4937a45e46b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80", attribution:"Nick Fewings @ Unsplash"}
+  {url:"https://images.unsplash.com/photo-1542296803-f4937a45e46b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80", attribution:"Nick Fewings @ Unsplash"},
+  {url:"https://images.pexels.com/photos/57400/tree-frog-anuran-frog-amphibians-57400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution: "Josch13 @ Pixabay"},
+  {url:"https://images.unsplash.com/photo-1520637388405-3a2a895efd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80", attribution: "James Wainscoat @ Unsplash"},
+  {url:"https://images.unsplash.com/photo-1504732237180-fec25eb6808c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3151&q=80", attribution:"Stephen Pedersen @ Unsplash"},
+  {url:"https://images.unsplash.com/photo-1541897976173-747ef83244b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80", attribution: "John Duncan @ Unsplash"},
+  {url:"https://images.unsplash.com/photo-1520636902994-f596446c3728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", attribution: "James Wainscoat @ Unsplash"}
 ];
 
 
@@ -156,7 +206,7 @@ var doc_temp = `
       <div class="top">
          <div class="left">
              <a href="%s" class="myButton">Keep Shopping</a>
-             <a href="%s" class="myButton">Learn Something</a>
+             <a href="%s" class="myButton">Explore</a>
          </div>
       </div>
     </body>
