@@ -1,40 +1,39 @@
-
-// VARIABLES SHOULD BE PHOTO URL, THE PAGE THE USER WAS TRYING TO GO TO, ATTRIBUTION
-// TODO: ATTRIBUTION, CHANGE PHOTOS -> Can just have a long list of photo urls / Attributions?  
-// TODO: Get a list of non profits working in the amazong, and circulate through donating with thier pages
+// Left TODO:
+// Witnesses attribution above photo attribution and link to project page (make project page on separate domain)
+// Options regarding timeout from shopping
 
 
 const facts = [
-"The Amazon hosts at least 427 mammal species including the giant otter",
-"The Amazon hosts at least 1300 species of birds",
-"The Amazon is home to at least 378 reptile species",
-"The Amazon is home to at least 400 amphibian species including the charming dart poison frog",
-">3000 species of freshwater fish swim in the Amazon rivers",
-"At least 100,000 invertebrate species inhabit the Amazon",
-"441 new species were discovered in the Amazon from 2010 to 2013 - we ain't seen nothing yet",
-"The Hercules beetle, found in the Amazon, is the strongest creature on earth, capable of carrying 850 times its own body weight",
-"In a 60 acre plot in the Amazon scientists found 1,104 different species of trees, just under what is found in Asia, Europe, and North America combined",
-"Peru’s Manu national park contains at least 1,307 species of butterfly, twice the number found in the United States",
-"There are believed to be 15,000 jaguars alive in the wild today",
-"There are 195 known languages spoken within the Amazon Basin",
-"Of the 160 societies that live within the Amazon rainforest, nearly 50% have no contact with the outside world",
-"20% of the world’s freshwater flows through the Amazon to the sea",
-"The Amazon River is over 4,000 miles long forming the largest river basin in the world",
-"The river basin covers 2,720,000 square miles and includes over 1,100 tributaries",
-"Trees in the Amazon contain nearly 11 years of global carbon emissions",
-"Of the 40,000 plants known to exist in the Amazon, 75% are only found in the Amazon",
-"The biggest tree of the Amazon rainforest is the Kapok Tree. It can grow to 200 feet tall and the trunk can be 10 or 11 feet in diameter",
-"There are more trees in the Amazon than stars in the Milky Way galaxy",
-"There are nearly 1 million insects known to science in the Amazon basin",
-"A single tree in Peru was found to have more species of ants than found in the entire United Kingdom",
-"The Amazon is the world's biggest rainforest, larger than the next two largest rainforests — in the Congo Basin and Indonesia — combined",
+"The Amazon hosts at least 427 mammal species including the giant otter.",
+"The Amazon hosts at least 1300 species of birds.",
+"The Amazon is home to at least 378 reptile species.",
+"The Amazon is home to at least 400 amphibian species including the charming dart poison frog.",
+">3000 species of freshwater fish swim in the Amazon rivers.",
+"At least 100,000 invertebrate species inhabit the Amazon.",
+"441 new species were discovered in the Amazon from 2010 to 2013 - we ain't seen nothing yet.",
+"The Hercules beetle, found in the Amazon, is the strongest creature on earth, capable of carrying 850 times its own body weight.",
+"In a 60 acre plot in the Amazon scientists found 1,104 different species of trees, just under what is found in Asia, Europe, and North America combined.",
+"Peru’s Manu national park contains at least 1,307 species of butterfly, twice the number found in the United States.",
+"There are believed to be 15,000 jaguars alive in the wild today.",
+"There are 195 known languages spoken within the Amazon Basin.",
+"Of the 160 societies that live within the Amazon rainforest, nearly 50% have no contact with the outside world.",
+"20% of the world’s freshwater flows through the Amazon to the sea.",
+"The Amazon River is over 4,000 miles long forming the largest river basin in the world.",
+"The river basin covers 2,720,000 square miles and includes over 1,100 tributaries.",
+"Trees in the Amazon contain nearly 11 years of global carbon emissions.",
+"Of the 40,000 plants known to exist in the Amazon, 75% are found only in the Amazon.",
+"The biggest tree of the Amazon rainforest is the Kapok Tree. It can grow to 200 feet tall and the trunk can be 10 or 11 feet in diameter.",
+"There are more trees in the Amazon than stars in the Milky Way galaxy.",
+"There are nearly 1 million insects known to science in the Amazon basin.",
+"A single tree in Peru was found to have more species of ants than found in the entire United Kingdom.",
+"The Amazon is the world's biggest rainforest, larger than the next two largest rainforests — in the Congo Basin and Indonesia — combined.",
 "The Amazon River is by far the world's largest river by volume. It has over 1,100 tributaries, 17 of which are longer than 1000 miles.",
 "The Amazon River once flowed west-ward instead of east-ward as it does today. The rise of the Andes caused it to flow into the Atlantic Ocean.",
-"The Amazon is estimated to have 16,000 tree species and 390 billion individual trees",
-"The Amazon is thought to have 2.5 million species of insects",
-"Cattle ranching accounts for roughly 70 percent of deforestation in the Amazon",
+"The Amazon is estimated to have 16,000 tree species and 390 billion individual trees.",
+"The Amazon is thought to have 2.5 million species of insects.",
+"Cattle ranching accounts for roughly 70 percent of deforestation in the Amazon.",
 "There are approximately 3000 fruits that grow in the rainforest that are edible; of these only 200 are now in use in the Western World. The Indians of the rainforest use over 2000.",
-"The toucan is the loudest creature in the Amazon. You can hear it as far as a half mile away",
+"The toucan is the loudest creature in the Amazon. You can hear it as far as a half mile away.",
 "If you were caught in the rain in the Amazon you have about 10 minutes to find your umbrella. The trees are so tightly packed that it can take 10 minutes for the rain to reach the ground below.",
 "Amazon natives use rainforest plants regularly but 90% of the ones they use have not been studied by modern science.",
 "There are approximately 10 million species of animals, plants and insects known to humanity and more than half of them call the rainforest home.",
@@ -43,10 +42,10 @@ const facts = [
 "One hectare (2.47 acres) may contain over 750 types of trees and 1500 species of higher plants.",
 "Much of our diet originated in the tropical rainforest, a small sampling includes: avocados, bananas, guavas, pineapples, mangos, cayenne, chocolate, ginger, coffee, Brazil nuts and cashews.",
 "Vincristine, extracted from the rainforest plant, periwinkle, cures 90% of acute childhood leukemia.",
-"The U.S. National Cancer Institute has identified 3000 plants that are active against cancer cells 70% of which are found in the rainforest.",
+"The U.S. National Cancer Institute has identified 3000 plants that are active against cancer cells, 70% of which are found in the rainforest.",
 "25% of the active ingredients in today's cancer-fighting drugs come from organisms found only in the rainforest.",
-"The Amazon is arguably the longest river in the world at 6,992 km, and contains more water than the Mississippi, Nile, and Yangtze combined",
-"The name 'Amazon' was given by Spanish explorer Francisco Orellana, after he was attacked by female warriors named theIcamiabas. He compared them to the Amazons of Greek mythology.",
+"The Amazon is arguably the longest river in the world at 6,992 km, and contains more water than the Mississippi, Nile, and Yangtze combined.",
+"The name 'Amazon' was given by Spanish explorer Francisco Orellana, after he was attacked by female warriors named the Icamiabas. He compared them to the Amazons of Greek mythology.",
 "The Amazon delivers 55 million gallons of water into the Atlantic ocean every second.",
 "The rainforest floor is very dark, with less than 1% of the light making it through the canopy of the trees.",
 "The Amazon River’s width varies between 1 and 6.2 miles during the dry season, but but up to 30 miles wide during the rainy season. It is 150 miles wide when it reaches the Atlantic Ocean.",
@@ -58,13 +57,13 @@ const facts = [
 "There are no bridges over the Amazon River because of the dramatic width change in the rainy season.",
 "The Amazon is at least 55 million years old. Take that, Pyramids!",
 "Norway has donated a billion USD to protect the Amazon rainforest. Thanks Norway! Hey Saudia Arabia...",
-"Human settlement in the Amazon dates back to ~11,200 years ago. Studies suggest that the natives of the AMazon were farming the forests to make them more productive.",
+"Human settlement in the Amazon dates back to ~11,200 years ago. Studies suggest that the natives of the Amazon were farming the forests to make it more productive.",
 "The Amazon's poison dart frog has enough venom that can kill up to 10 humans.",
 "Martin Strel holds the Guinness World Record for swimming the entire length of 5,268 m of the Amazon River for 66 days.",
-"In the past years, the Amazon has lost approximately 20% of its due to human deforestation."
+"In the past years, the Amazon has lost approximately 20% of its extent due to human deforestation."
 ];
 
-// Many facts are from: http://www.rain-tree.com/facts.htm, Motagabay.com, Amazon Aid Foundation, softschools.com, www.rainforestcruises.com
+// Many facts are from: http://www.rain-tree.com/facts.htm, Motagabay.com, Amazon Aid Foundation, softschools.com, www.rainforestcruises.com, ietravel.com
 
 const learn = [
 "https://www.globalforestwatch.org/dashboards/country/BRA",
@@ -105,7 +104,13 @@ const learn = [
 "https://www.wired.com/2015/02/sahara-keeps-amazon-green/",
 "https://www.ietravel.com/blog/30-fascinating-facts-about-brazilian-amazon",
 "https://www.theguardian.com/environment/2011/aug/26/underground-river-amazon",
-"https://www.ietravel.com/blog/10-cool-creepy-crawlies-found-amazon-rainforest"
+"https://www.ietravel.com/blog/10-cool-creepy-crawlies-found-amazon-rainforest",
+"https://www.nationalgeographic.com/environment/2018/12/amazon-rain-forest-conservation-chico-mendes-anniversary-jair-bolsanaro/",
+"https://www.nationalgeographic.com/travel/countries/peru-amazon-cruise-traveler/",
+"https://news.nationalgeographic.com/news/energy/2010/12/101203-amazon-brazil-carbon-market-deforestation/",
+"https://yourshot.nationalgeographic.com/tags/amazon_rainforest/#b/popular",
+"https://www.nationalgeographic.com/people-and-culture/food/the-plate/2015/06/04/bolivian-amazon-dwellers-eat-all-the-jungle-offers/",
+"https://news.nationalgeographic.com/2017/08/saki-vanzolini-monkey-amazon-rainforest-video-spd/"
 ];
 
 
@@ -119,7 +124,6 @@ const photos = [
   {url:"https://i.redd.it/ejxszq33c4401.jpg", attribution: "CaptainGoran @ Reddit"},
   {url:"http://i.imgur.com/7VAyv.jpg", attribution: "Mind_Virus @ Reddit"},
   {url:"https://images.pexels.com/photos/904807/pexels-photo-904807.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"icon0 @ pexels"},
-  {url:"https://images.pexels.com/photos/772481/pexels-photo-772481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Renan Bomtempo @ Pexels"},
   {url:"https://images.pexels.com/photos/1123767/pexels-photo-1123767.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Cesar Aguilar @ Pexels"},
   {url:"https://images.pexels.com/photos/1385474/pexels-photo-1385474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Simon Matzinger @ Pexels"},
   {url:"https://images.pexels.com/photos/1385474/pexels-photo-1385474.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Mahir Dalloul @ Pexels"},
@@ -133,7 +137,6 @@ const photos = [
   {url:"https://images.pexels.com/photos/1322599/pexels-photo-1322599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Rajesh Balouria @ Pexels"},
   {url:"https://images.pexels.com/photos/1055379/pexels-photo-1055379.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Daniel Frese @ Pexels"},
   {url:"https://images.pexels.com/photos/631909/pexels-photo-631909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Agnieszka Palmowska @ Pexels"},
-  {url:"https://cdn.pixabay.com/photo/2013/09/13/14/18/flower-181984_1280.jpg", attribution:"oom_endro @ Pixabay"},
   {url:"https://images.pexels.com/photos/119591/pexels-photo-119591.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Joey Kyber @ Pexels"},
   {url:"https://images.pexels.com/photos/672142/pexels-photo-672142.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Zaw Win Tun @ Pexels"},
   {url:"https://images.pexels.com/photos/339614/pexels-photo-339614.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Nandhu Kumar @ Pexels"},
@@ -187,6 +190,9 @@ These are all nice, but no hotlinking to pixabay. TODO: Download (be careful to 
   {url:"https://cdn.pixabay.com/photo/2013/10/21/15/08/butterfly-199020_1280.jpg", attribution: "stux @ Pixabay"},
   {url:"https://cdn.pixabay.com/photo/2017/09/16/19/34/parrot-2756491_1280.jpg", attribution: "alvaroas8a0 @ Pixabay"} 
   {url:"https://cdn.pixabay.com/photo/2016/11/08/04/49/jungle-1807476_1280.jpg", attribution:"Sasint @ Pixabay"}, 
+  {url:"https://cdn.pixabay.com/photo/2013/09/13/14/18/flower-181984_1280.jpg", attribution:"oom_endro @ Pixabay"},
+// background is too light at the top:
+https://images.pexels.com/photos/772481/pexels-photo-772481.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
 */
 
 // Thanks nice person on Stack overflow - I'm so used to python!
@@ -203,11 +209,15 @@ var doc_temp = `
     </head>
     <body>
       <img class="fsimg" src="%s">
-      <div class="top">
-         <div class="left">
-             <a href="%s" class="myButton">Keep Shopping</a>
-             <a href="%s" class="myButton">Explore</a>
-         </div>
+      <div class="cent">
+      <h2><center><b>%s</b></center></h2>
+      </div>
+      <div class="left">
+          <a href="%s" class="myButton">Keep Shopping</a>
+          <a href="%s" class="myButton">Explore</a>
+      </div>
+      <div class="right">
+          <center>Photo by %s</center>
       </div>
     </body>
   </html>`;
@@ -227,17 +237,18 @@ var time_now = new Date().getTime();
 
 // Popup Every 5 minutes -> This should probably be a setting
 var minutes_between_forests = 1;
-const mili_in_s = 1000;
+const milli_in_s = 1000;
 const s_in_m = 60;
 
-if (lasty == 0 || time_now - lasty > 1000 *60*minutes_between_forests) {
+if (lasty == 0 || time_now - lasty > milli_in_s * s_in_m *minutes_between_forests) {
    // show photo, update last show timestamp
    localStorage.setItem("last_popup", time_now);
    target_location = window.location.href;
    var learn_idx = Math.round(Math.random() * (learn.length-1)); 
    var photo_idx = Math.round(Math.random() * (photos.length-1)); 
+   var facts_idx = Math.round(Math.random() * (facts.length-1)); 
    console.log(photos[photo_idx].url);
-   var doc = fillTemplate(doc_temp, photos[photo_idx].url, target_location, learn[learn_idx]);
+   var doc = fillTemplate(doc_temp, photos[photo_idx].url, facts[facts_idx], target_location, learn[learn_idx], photos[photo_idx].attribution);
    //window.open("https://www.pexels.com/search/rainforest/");
    document.open();
    document.write(doc);
