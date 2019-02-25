@@ -1,5 +1,7 @@
 // Left TODO:
 // Witnesses attribution above photo attribution and link to project page (make project page on separate domain)
+// Project page should include: About, Inspiration, Feedback Form! Useful Links, Prominent point about "Project by the Witnesses of Climatology with link", The Team: Tilek, Pasha, Olya "girl's gotta code" irzak.
+// One page on the site can just be circulating through the options - link a demo. Place to donate? Donate to this project? Hmmm..... guess we can always redonate if we get too much!
 // Options regarding timeout from shopping
 
 
@@ -51,14 +53,13 @@ const facts = [
 "The Amazon River’s width varies between 1 and 6.2 miles during the dry season, but but up to 30 miles wide during the rainy season. It is 150 miles wide when it reaches the Atlantic Ocean.",
 "These dolphins have traditionally been spared from tribal hunting because they were believed to be magical creatures. They are now threatened by pollution.",
 "There are approximately 150 different species of monkeys found in the Amazon.",
-"Brazil is also home to more uncontacted indigenous tribes than any other country in the world, with an estimated 80 of them living in remote corners of the Brazilian Amazon.",
 "Winds carry mineral-rich dust from the Sahara to the Amazon, depositing over 27 million tons a year. Heavy rains deplete Amazonian phosphorous, while the Sahara replenishes them.",
 "The Rio Hamza is a subterranean river underneath the Amazon that is just as long and many times as wide. It runs about 4 kms underground and moves at one millimeter an hour.",
 "There are no bridges over the Amazon River because of the dramatic width change in the rainy season.",
 "The Amazon is at least 55 million years old. Take that, Pyramids!",
 "Norway has donated a billion USD to protect the Amazon rainforest. Thanks Norway! Hey Saudia Arabia...",
 "Human settlement in the Amazon dates back to ~11,200 years ago. Studies suggest that the natives of the Amazon were farming the forests to make it more productive.",
-"The Amazon's poison dart frog has enough venom that can kill up to 10 humans.",
+"The Amazon's poison dart frog has enough venom that can kill 10 humans.",
 "Martin Strel holds the Guinness World Record for swimming the entire length of 5,268 m of the Amazon River for 66 days.",
 "In the past years, the Amazon has lost approximately 20% of its extent due to human deforestation."
 ];
@@ -179,7 +180,9 @@ const photos = [
   {url:"https://images.unsplash.com/photo-1520637388405-3a2a895efd2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3300&q=80", attribution: "James Wainscoat @ Unsplash"},
   {url:"https://images.unsplash.com/photo-1504732237180-fec25eb6808c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3151&q=80", attribution:"Stephen Pedersen @ Unsplash"},
   {url:"https://images.unsplash.com/photo-1541897976173-747ef83244b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3150&q=80", attribution: "John Duncan @ Unsplash"},
-  {url:"https://images.unsplash.com/photo-1520636902994-f596446c3728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", attribution: "James Wainscoat @ Unsplash"}
+  {url:"https://images.unsplash.com/photo-1520636902994-f596446c3728?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80", attribution: "James Wainscoat @ Unsplash"},
+  {url:"https://images.unsplash.com/photo-1529774172307-627a0ae46dae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3302&q=80", attribution:"Xuan Nguyen @ Unsplash"},
+  {url:"https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", attribution:"Pixabay @ Pexels"}
 ];
 
 
@@ -238,7 +241,7 @@ var time_now = new Date().getTime();
 // Popup Every 5 minutes -> This should probably be a setting
 var minutes_between_forests = 1;
 const milli_in_s = 1000;
-const s_in_m = 60;
+const s_in_m = 1;
 
 if (lasty == 0 || time_now - lasty > milli_in_s * s_in_m *minutes_between_forests) {
    // show photo, update last show timestamp

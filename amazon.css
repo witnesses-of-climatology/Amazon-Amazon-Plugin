@@ -13,6 +13,7 @@ body {
 .cent {
   position: absolute;
   top: 2%;
+  width:80%;
   left: 50%;
   justify-content: center;
   align-items: center;
