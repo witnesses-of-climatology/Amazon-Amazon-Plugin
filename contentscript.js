@@ -13,7 +13,7 @@ const facts = [
 "At least 100,000 invertebrate species inhabit the Amazon",
 "441 new species were discovered in the Amazon from 2010 to 2013 - we ain't seen nothing yet",
 "The Hercules beetle, found in the Amazon, is the strongest creature on earth, capable of carrying 850 times its own body weight",
-"In a 60 acre plot in the Amazon scientists found 1,104 different species of trees, just under what is found in Asia, Europe, and North America combined"
+"In a 60 acre plot in the Amazon scientists found 1,104 different species of trees, just under what is found in Asia, Europe, and North America combined",
 "Peru’s Manu national park contains at least 1,307 species of butterfly, twice the number found in the United States",
 "There are believed to be 15,000 jaguars alive in the wild today",
 "There are 195 known languages spoken within the Amazon Basin",
