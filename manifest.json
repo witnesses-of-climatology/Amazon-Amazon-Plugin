@@ -10,7 +10,7 @@
              "128": "tree_128.png" },
    "content_scripts": [
    {
-     "matches": ["https://www.amazon.com/*"],
+     "matches": ["https://www.amazon.com/*", "https://smile.amazon.com/*"],
      "run_at": "document_start",
      "js": ["contentscript.js"],
      "css": ["amazon.css"]

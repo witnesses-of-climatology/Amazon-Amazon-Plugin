@@ -211,7 +211,7 @@ var doc_temp = `
        <title>Beautiful Amazon Photos</title>
     </head>
     <body>
-      <img class="fsimg" src="%s">
+      <div class="fsimg" style="background-image: url('%s');">
       <div class="cent">
       <h2><center><b>%s</b></center></h2>
       </div>
@@ -221,6 +221,7 @@ var doc_temp = `
       </div>
       <div class="right">
           <center>Photo by %s</center>
+      </div>
       </div>
     </body>
   </html>`;
