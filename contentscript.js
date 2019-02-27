@@ -39,7 +39,7 @@ const facts = [
 "If you were caught in the rain in the Amazon you have about 10 minutes to find your umbrella. The trees are so tightly packed that it can take 10 minutes for the rain to reach the ground below.",
 "Amazon natives use rainforest plants regularly but 90% of the ones they use have not been studied by modern science.",
 "There are approximately 10 million species of animals, plants and insects known to humanity and more than half of them call the rainforest home.",
-"Rainforests once covered 14% of the earth's land surface; now they cover a mere 6% and experts estimate that the last remaining rainforests could be consumed in less than 40 years.",
+"Rainforests once covered 14% of the earth's land surface; now they cover a mere 6%.",
 "The Amazon rainforest is also referred to as the ‘Lungs of the Planet' because it produces more than 20% of the world's oxygen.",
 "One hectare (2.47 acres) may contain over 750 types of trees and 1500 species of higher plants.",
 "Much of our diet originated in the tropical rainforest, a small sampling includes: avocados, bananas, guavas, pineapples, mangos, cayenne, chocolate, ginger, coffee, Brazil nuts and cashews.",
@@ -51,7 +51,7 @@ const facts = [
 "The Amazon delivers 55 million gallons of water into the Atlantic ocean every second.",
 "The rainforest floor is very dark, with less than 1% of the light making it through the canopy of the trees.",
 "The Amazon River’s width varies between 1 and 6.2 miles during the dry season, but but up to 30 miles wide during the rainy season. It is 150 miles wide when it reaches the Atlantic Ocean.",
-"These dolphins have traditionally been spared from tribal hunting because they were believed to be magical creatures. They are now threatened by pollution.",
+"The Amazon River Dolphins have traditionally been spared from tribal hunting because they were believed to be magical creatures. They are now threatened by pollution.",
 "There are approximately 150 different species of monkeys found in the Amazon.",
 "Winds carry mineral-rich dust from the Sahara to the Amazon, depositing over 27 million tons a year. Heavy rains deplete Amazonian phosphorous, while the Sahara replenishes them.",
 "The Rio Hamza is a subterranean river underneath the Amazon that is just as long and many times as wide. It runs about 4 kms underground and moves at one millimeter an hour.",
@@ -111,7 +111,8 @@ const learn = [
 "https://news.nationalgeographic.com/news/energy/2010/12/101203-amazon-brazil-carbon-market-deforestation/",
 "https://yourshot.nationalgeographic.com/tags/amazon_rainforest/#b/popular",
 "https://www.nationalgeographic.com/people-and-culture/food/the-plate/2015/06/04/bolivian-amazon-dwellers-eat-all-the-jungle-offers/",
-"https://news.nationalgeographic.com/2017/08/saki-vanzolini-monkey-amazon-rainforest-video-spd/"
+"https://news.nationalgeographic.com/2017/08/saki-vanzolini-monkey-amazon-rainforest-video-spd/",
+"https://www.digital-democracy.org/ourwork/waorani/"
 ];
 
 
@@ -204,11 +205,25 @@ function fillTemplate(str) {
     return str.replace(/%s/g, () => args[i++]);
 }
 
-var target_location="https://www.cnn.com";
 var doc_temp = `
   <html>
     <head>
        <title>Beautiful Amazon Photos</title>
+       <script>
+          function SetTimeout() {
+            // fill in with whatever the the setting was
+ 	    var shop_time = prompt("Set Minutes of Shopping Time", "10");
+            if (shop_time != null && shop_time != "") {
+              var int_shop = Number(shop_time);
+  	      if (isNaN(int_shop)) {
+                alert("Shopping time must be a number");
+              } else {
+                console.log("Hello " + shop_time) ;
+    		localStorage.setItem("shop_timeout_m", int_shop);
+              }
+            }
+          }
+       </script>
     </head>
     <body>
       <div class="fsimg" style="background-image: url('%s');">
@@ -217,6 +232,7 @@ var doc_temp = `
       </div>
       <div class="left">
           <a href="%s" class="myButton">Keep Shopping</a>
+          <a onclick="SetTimeout()" class="myButton">Set Shopping Time</a>
           <a href="%s" class="myButton">Explore</a>
       </div>
       <div class="right">
@@ -227,33 +243,37 @@ var doc_temp = `
   </html>`;
 
 
+
 // TODO:  Check support for local storage first!
 var lasty = 0;
-
 try {
     lasty =  localStorage.getItem("last_popup");
 } catch (err) {
   console.log("First Usage!");
-  lasty = 0;
+}
+
+var shop_timeout_m = 5;
+try {
+    shop_timeout_m =  localStorage.getItem("shop_timeout_m");
+    console.log("shop timeout:" + shop_timeout_m);
+} catch (err) {
 }
 
 var time_now = new Date().getTime();
 
-// Popup Every 5 minutes -> This should probably be a setting
-var minutes_between_forests = 1;
 const milli_in_s = 1000;
-const s_in_m = 1;
+const s_in_m = 60;
 
-if (lasty == 0 || time_now - lasty > milli_in_s * s_in_m *minutes_between_forests) {
+
+if (lasty == 0 || time_now - lasty > milli_in_s * s_in_m * shop_timeout_m) {
    // show photo, update last show timestamp
    localStorage.setItem("last_popup", time_now);
-   target_location = window.location.href;
+   var target_location = window.location.href;
    var learn_idx = Math.round(Math.random() * (learn.length-1)); 
    var photo_idx = Math.round(Math.random() * (photos.length-1)); 
    var facts_idx = Math.round(Math.random() * (facts.length-1)); 
    console.log(photos[photo_idx].url);
    var doc = fillTemplate(doc_temp, photos[photo_idx].url, facts[facts_idx], target_location, learn[learn_idx], photos[photo_idx].attribution);
-   //window.open("https://www.pexels.com/search/rainforest/");
    document.open();
    document.write(doc);
    document.close();
