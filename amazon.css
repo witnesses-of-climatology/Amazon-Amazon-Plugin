@@ -38,6 +38,8 @@ body {
   bottom: 10px;
   right:0;
   padding:20px;
+}
+.semitrans {
   color:#fff;
   font-size:20px;
   background-color:rgba(0, 0, 0, 0.3);
@@ -64,9 +66,9 @@ body {
 	cursor:pointer;
 	color:#ffffff;
 	font-family:Arial;
-	font-size:20px;
+	font-size:15px;
 	font-weight:bold;
-	padding:6px 24px;
+	padding:6px 15px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #1974cf;
 }

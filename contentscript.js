@@ -212,7 +212,7 @@ var doc_temp = `
        <script>
           function SetTimeout() {
             // fill in with whatever the the setting was
- 	    var shop_time = prompt("Set Minutes of Shopping Time", "10");
+ 	    var shop_time = prompt("Set Minutes of Shopping Time", "%s");
             if (shop_time != null && shop_time != "") {
               var int_shop = Number(shop_time);
   	      if (isNaN(int_shop)) {
@@ -236,7 +236,8 @@ var doc_temp = `
           <a href="%s" class="myButton">Explore</a>
       </div>
       <div class="right">
-          <center>Photo by %s</center>
+          <center><img src="%s" width="140" height="54" /></center> 
+          <center class="semitrans">Photo by %s</center>
       </div>
       </div>
     </body>
@@ -255,9 +256,13 @@ try {
 var shop_timeout_m = 5;
 try {
     shop_timeout_m =  localStorage.getItem("shop_timeout_m");
+    if (shop_timeout_m == null) {
+       shop_timeout_m = 5;
+    }
     console.log("shop timeout:" + shop_timeout_m);
 } catch (err) {
 }
+
 
 var time_now = new Date().getTime();
 
@@ -273,7 +278,9 @@ if (lasty == 0 || time_now - lasty > milli_in_s * s_in_m * shop_timeout_m) {
    var photo_idx = Math.round(Math.random() * (photos.length-1)); 
    var facts_idx = Math.round(Math.random() * (facts.length-1)); 
    console.log(photos[photo_idx].url);
-   var doc = fillTemplate(doc_temp, photos[photo_idx].url, facts[facts_idx], target_location, learn[learn_idx], photos[photo_idx].attribution);
+   var our_logo_path = chrome.runtime.getURL("images/blk_reclaim_amazon.png");
+   var doc = fillTemplate(doc_temp, shop_timeout_m.toString(), photos[photo_idx].url, facts[facts_idx],
+                          target_location, learn[learn_idx], our_logo_path, photos[photo_idx].attribution);
    document.open();
    document.write(doc);
    document.close();

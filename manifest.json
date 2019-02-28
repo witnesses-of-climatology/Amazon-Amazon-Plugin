@@ -1,6 +1,6 @@
 {
-  "name": "Reclaiming the Amazon",
-  "version": "1.0",
+  "name": "Reclaim the Amazon",
+  "version": "1.1",
   "description": "Show photos of the Amazon when browsing to Amazon.com",
   "permissions" : [
     "activeTab", "storage"
@@ -16,5 +16,7 @@
      "css": ["amazon.css"]
    }
  ],
-  "manifest_version": 2
+  "manifest_version": 2,
+  "web_accessible_resources": ["images/*.png"]
+ 
 }
